@@ -1,14 +1,16 @@
 <script context='module'>
     import TextImage from '$lib/components/TextImage.svelte'
     const textimage = TextImage
-    export {textimage}
+    export {textimage} // TODO: add link support
 </script>
 
 <script>
     import Nav from '$lib/components/Nav.svelte';
 </script>
 
+<div class='nav'>
 <Nav />
+</div>
 <div class='section content'>
     <div class='container'>
     <slot />
@@ -16,8 +18,9 @@
 </div>
 
 <style>
-    div {
-        margin-right: 5rem;
-        margin-left: 5rem;
+    @media print {
+        .nav {
+            display: none;
+        }
     }
 </style>

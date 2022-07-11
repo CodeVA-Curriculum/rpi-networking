@@ -13,11 +13,17 @@ The "terminal" is a software program on your computer. To use it, you'll type in
 * Delete a file
 * Navigate the directory structure of your computer
 
-## Using the Terminal
+You can learn these basic skills by checking out the *[Terminal Basics](/appendix/terminal-basics)* tutorial in the [Appendix](/appendix), but you don't have to--this tutorial walks you through each step one at a time and tells you what to type at each stage.
+
+## Testing Your Lab Network with the Terminal
+
+In this activity, you'll connect your computer to your lab network and test out the connections using some terminal commands! Follow the steps below to get connected and test things out.
+
+### 1. Open Your Terminal
 
 Opening your terminal is different depending on what operating system you're using:
 
-:::textimage{src='TODO:'}
+:::textimage{src='TODO:' classList='box'}
 ### Windows
 
 1. Click the `Start` menu 
@@ -25,7 +31,7 @@ Opening your terminal is different depending on what operating system you're usi
 3. Click "Command Line" to open the terminal application
 :::
 
-:::TextImage{src='TODO:'}
+:::TextImage{src='TODO:' classList='box'}
 ### Mac
 
 1. Open "Spotlight Search" by pressing `Cmd + Space`
@@ -33,33 +39,59 @@ Opening your terminal is different depending on what operating system you're usi
 3. Click "Terminal" to open the Terminal application.
 :::
 
-Once your terminal is open, you're ready to start trying out some commands! In this tutorial, you'll:
+### 2. Connect Your Computer
 
-1. Make a folder
-2. Enter the folder
-3. Make a file in the folder
-4. Edit the file
-5. Delete the file
-6. Delete the folder
+Next, you need to connect your computer to the network. Do this by plugging in the USB-to-Ethernet adapter. Plug the USB side into your computer, and then connect the Ethernet side to one of your switches.
 
-Follow the instructions below to try it out, or if you'd like, skip to **Testing Your Lab Network with the Terminal**.
+![The USB-to-Ethernet adapter you'll use to connect your device to the network](TODO:)
 
-### Windows Command Line Tutorial
+![An example of how to connect your computer to the network](TODO:)
 
+The lab network doesn't have internet, so it might take a minute for your computer to connect and you might see some warnings that you don't have internet access--that's fine! We don't need it to use the network and learn the basics. You might want to turn off the Wi-Fi on your personal computer during this activity so it doesn't automatically change over the conference Wi-Fi to get internet signal back.
+
+### 3. Find Your IP Address
+
+Every time you connect to a network, your computer is assigned an IP address. This is the "location" of your computer on the network, and it's what other computers would use to communicate with your computer. You can find your IP address by running the following command in your terminal:
+
+* **Windows:** `TODO:`
+* **Mac/Linux:** `TODO:`
+
+:::textimage{src="TODO:"}
+Type the appropriate command based on which operating system you are using, and hit `Enter`. When you run the command, you'll see a lot of information pop up in the terminal. You don't need very much of this info at all, really--you're looking for the `eth0` address buried in the wall of text that poppoed up. Check out the image for an example:
+:::
+
+When you've found your IP address, write it on the sticky note associated with your computer in the topology diagram you made during the *[Unplugged Topology](/unplugged-topology)* activity!
+
+### 4. Ping the Devices on Your Network
+
+To make sure the network is working properly, you can try to communicate with the other computers on your network. Each computer has a name--check out the labels on the lab network to see the names for the computers in your lab. This name is called a **hostname**, and it's a special substitute for an IP address that we can use to communicate over the network.
+
+To test the network, you need to "ping" each of the computers connected to it. "Pinging" involves using a terminal command to send a very small amount of data to a specificed IP address or hostname on the network. If it succeeds, then te network is working correctly! If it fails, it means there's something wrong. To "ping" an address, type the following command:
+
+```
+ping [hostname]
+```
+
+...replacing `[hostname]` with one of the hostnames in your lab. You should see something like this:
+
+```
 TODO:
+```
 
-| Command | Description | Example |
-| ------- | ----------- | ------- |
+If you see something like this:
 
-### Mac/Linux Terminal Tutorial
-
+````
 TODO:
+```
 
-| Command | Description | Example |
-| ------- | ----------- | ------- |
+...it means your network isn't set up correctly. Let us know and we will come over to help troubleshoot! Once you've successfully `ping`ed a device, try:
 
-## Testing Your Lab Network with the Terminal
+1. Pinging the other devices on the network
+2. Pinging another session attendee's computer
+3. Pinging yourself!
 
-1. Find your IP address
-2. "Ping" the Raspberry Pi computers on your network
-3. Visit the websites being served by the device!
+If you don't know the hostname, you can use an IP address in its place.
+
+---
+
+Once you've tested the network, you're ready for the next step! Check out the *[SSH Practice](/ssh-practice)* tutorial next.
