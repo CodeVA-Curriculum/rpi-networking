@@ -1,3 +1,9 @@
+<script context='module'>
+    import TextImage from '$lib/components/TextImage.svelte'
+    const textimage = TextImage
+    export {textimage}
+</script>
+
 <script>
     import Nav from '$lib/components/Nav.svelte';
 </script>

@@ -23,6 +23,7 @@
     "remark-directive-rehype": "^0.4.0",
     "remark-frontmatter": "^4.0.1",
     "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
     "sass": "^1.53.0",
     "svelte-fa": "^3.0.2",
     "svelte-preprocess": "^4.10.7"

@@ -11,11 +11,13 @@ TODO: description
 
 TODO:
 
-## Extra Tutorials
+## Extra Tutorials & Resources
 
 [TODO: description]
 
-:::box
+* HTML Cheat Sheet
+
+<!-- :::box -->
 ### How to Set up Raspberry Pi Networks
 
 [TODO: description]
@@ -23,4 +25,4 @@ TODO:
 ::button[View Tutorial]{href="TODO:"}
 ::button[Print Tutorial]{href="TODO:"}
 
-:::
+<!-- ::: -->
