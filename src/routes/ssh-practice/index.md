@@ -66,10 +66,41 @@ You'll see something like this:
 TODO:
 ```
 
-Use python command to toggle the LED on your raspberry pi.
+This is the Python REPL, which allows you to type commands written in the Python language to control your computer. It's a lot like the terminal! First, you need to load up the `led` object. Type in the following command:
 
-Uses CircuitPython, lots of cool things to do with this that are beyond the scope of this session
+```
+from pi import led
+```
+
+...and hit `Enter`. Just like with the terminal, if no error appears you're good to go! Now that you've `import`ed the `led`, you can manipulate it! Try out the commands below by entering them into the terminal one at a time:
+
+| Command | Description |
+| ------- | ----------- |
+| `led.on()` | Turn the LED on |
+| `led.off()` | Turn the LED off |
+| `led.toggle()` | Toggle the LED on or off |
+| `led.red()` | Set the LED color to red |
+| `led.blue()` | Set the LED color to blue |
+| `led.green()` | Set the LED color to green |
+| `led.white()` | Set the LED color to white |
+| quit() | Exit the REPL and return to the terminal |
+
+This works by using CircuitPython a set of Python libraries designed to control electronic components. You can do lots of cool things with it; check it out if you're interested!
 
 ## Finding Your Server
 
-Make a change, then visit the site on your laptop to see if it worked!
+After playing with your computer's light, it's time to do some more advanced work. As you may already know, your Pi is currently serving a website that you can access via the network! If you can find the files the Pi is serving over the network, you can change what the website looks like.
+
+### 1. Connect to Your Website
+
+If you have not done so already, visit your Pi's website by opening your internet browser and typing in `[hostname]:3000`, where `[hostname]` is replaced with the hostname for your Pi. This website is being stored on your Pi! If you change the HTML code in the files on your Pi, the website will change as well.
+
+### 2. Find the File
+
+### 3. Edit the File
+
+### 4. Reload the Site
+
+---
+
+Now that you've had some practice with SSH, it's time to do a project with your group! Check out the [next tutorial](/web-server) to get started on the  *[Web Server Mini-Project](/web-server)*.

@@ -31,7 +31,7 @@ Opening your terminal is different depending on what operating system you're usi
 3. Click "Command Line" to open the terminal application
 :::
 
-:::TextImage{src='TODO:' classList='box'}
+:::textimage{src='TODO:' classList='box'}
 ### Mac
 
 1. Open "Spotlight Search" by pressing `Cmd + Space`
@@ -89,6 +89,7 @@ TODO:
 1. Pinging the other devices on the network
 2. Pinging another session attendee's computer
 3. Pinging yourself!
+4. Try visiting the following website in your browser: `[hostname]:3000` (I know there's no internet, but just trust me)
 
 If you don't know the hostname, you can use an IP address in its place.
 
