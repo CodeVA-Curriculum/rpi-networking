@@ -1,7 +1,11 @@
 <script context='module'>
     import TextImage from '$lib/components/TextImage.svelte'
+    import Anchor from './Anchor.svelte';
+    import Box from './Box.svelte'
     const textimage = TextImage
-    export {textimage} // TODO: add link support
+    const a = Anchor
+    const box = Box
+    export {textimage, a, box}
 </script>
 
 <script>

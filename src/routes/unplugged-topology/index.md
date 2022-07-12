@@ -2,23 +2,25 @@
 
 In this activity, you'll create a **network diagram** that you can use as a reference during this workshop. Then, you'll hook up all the hardware for your group's lab network and get ready to test things out! The main **learning objectives** for this activity are the following:
 
-* Lorem ipsum
-* Lorem ipsum
+* Familiarize yourself with the terminology associated with networking hardware
+* Diagram and set up a simple network with Raspberry Pi computers
 
-## What Do You Have in Front of You?
+Follow the steps below to complete the activity!
 
-Creating sticky notes for each device on the network
+## 1. What Do You Have in Front of You?
 
-## Diagramming Your "Lab" Network
+
+
+## 2. Diagram Your "Lab" Network
 
 Connecting sticky notes together
 
-## Hooking Everything Together & Powering Up
+## 3. Setting Up the Hardware
 
 Don't hook up your computer yet!
 
 ## "Plugging In"
 
-Now that everything is hooked up, you need to test your connections and make sure everything is working properly! For that, head over to the next activity, *[Terminal Mapping](TODO:)*.
+Now that everything is hooked up, you need to test your connections and make sure everything is working properly! For that, head over to the next activity, *[Terminal Mapping](/terminal-basics)*.
 
 <!-- ::next{href='/terminal-mapping'} -->

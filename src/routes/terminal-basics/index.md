@@ -45,16 +45,14 @@ Next, you need to connect your computer to the network. Do this by plugging in t
 
 ![The USB-to-Ethernet adapter you'll use to connect your device to the network](TODO:)
 
-![An example of how to connect your computer to the network](TODO:)
-
 The lab network doesn't have internet, so it might take a minute for your computer to connect and you might see some warnings that you don't have internet access--that's fine! We don't need it to use the network and learn the basics. You might want to turn off the Wi-Fi on your personal computer during this activity so it doesn't automatically change over the conference Wi-Fi to get internet signal back.
 
 ### 3. Find Your IP Address
 
 Every time you connect to a network, your computer is assigned an IP address. This is the "location" of your computer on the network, and it's what other computers would use to communicate with your computer. You can find your IP address by running the following command in your terminal:
 
-* **Windows:** `TODO:`
-* **Mac/Linux:** `ifconfig:`
+* **Windows:** `ifconfig`
+* **Mac/Linux:** `ip a`
 
 :::textimage{src="TODO:"}
 Type the appropriate command based on which operating system you are using, and hit `Enter`. When you run the command, you'll see a lot of information pop up in the terminal. You don't need very much of this info at all, really--you're looking for the `eth0` address buried in the wall of text that poppoed up. Check out the image for an example:

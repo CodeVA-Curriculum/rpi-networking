@@ -20,4 +20,9 @@
     .post > hr {
         margin-bottom: 4rem;
     }
+
+    h2 > a {
+        text-decoration: underline;
+        color: hsl(0, 0%, 21%);
+    }
 </style>
