@@ -1,5 +1,7 @@
 # Web Server Mini-Project
 
+In this mini-project, you'll work with your group to build a simple web server with some files. Then, you'll work together to consider how your small-scale internet works, and what sorts of norms, guidelines, and rules you would put in place if you wanted other people to use it.
+
 ## Step 1: Assign Roles
 
 The "extra" computer in your network will be your server. Use a sticky note or a piece of tape to indicate which computer is the server so you don't forget!
