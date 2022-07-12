@@ -54,7 +54,7 @@ The lab network doesn't have internet, so it might take a minute for your comput
 Every time you connect to a network, your computer is assigned an IP address. This is the "location" of your computer on the network, and it's what other computers would use to communicate with your computer. You can find your IP address by running the following command in your terminal:
 
 * **Windows:** `TODO:`
-* **Mac/Linux:** `TODO:`
+* **Mac/Linux:** `ifconfig:`
 
 :::textimage{src="TODO:"}
 Type the appropriate command based on which operating system you are using, and hit `Enter`. When you run the command, you'll see a lot of information pop up in the terminal. You don't need very much of this info at all, really--you're looking for the `eth0` address buried in the wall of text that poppoed up. Check out the image for an example:
