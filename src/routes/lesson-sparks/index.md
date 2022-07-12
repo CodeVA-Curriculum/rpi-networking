@@ -1,1 +1,0 @@
-# Networking Lesson Sparks Activity

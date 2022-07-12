@@ -19,10 +19,10 @@ TODO:
 
 <!-- :::box -->
 ### How to Set up Raspberry Pi Networks
-
+<!-- 
 [TODO: description]
 
 ::button[View Tutorial]{href="TODO:"}
-::button[Print Tutorial]{href="TODO:"}
+::button[Print Tutorial]{href="TODO:"} -->
 
 <!-- ::: -->

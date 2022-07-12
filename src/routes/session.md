@@ -8,7 +8,7 @@
 
 Check out the resources below during and after the session. Reach out to us at [curriculum@codevirginia.org]() with feedback and questions!
 
-<!-- :::box -->
+:::box
 ## [Unplugged Network Topology]({base}/unplugged-topology)
 
 [TODO: description]
@@ -17,9 +17,9 @@ Check out the resources below during and after the session. Reach out to us at [
 ::button[View Sample Lesson Plan]{href="{base}/unplugged-topology/lesson-plan"}
 ::button[Print Sample Lesson Plan]{href="{base}/unplugged-topology/lesson-plan"} -->
 
-<!-- ::: -->
+:::
 
-<!-- :::box -->
+:::box
 ## [Terminal Basics]({base}/terminal-basics)
 
 [TODO: description]
@@ -28,9 +28,9 @@ Check out the resources below during and after the session. Reach out to us at [
 ::button[View Sample Lesson Plan]{href="{base}/terminal-basics/lesson-plan"}
 ::button[Print Sample Lesson Plan]{href="{base}/terminal-basics/lesson-plan"} -->
 
-<!-- ::: -->
+:::
 
-<!-- :::box -->
+:::box
 ## [Secure-Shell Practice]({base}/ssh-practice)
 
 [TODO: description]
@@ -39,9 +39,9 @@ Check out the resources below during and after the session. Reach out to us at [
 ::button[View Sample Lesson Plan]{href="{base}/ssh-practice/lesson-plan"}
 ::button[Print Sample Lesson Plan]{href="{base}/ssh-practice/lesson-plan"} -->
 
-<!-- ::: -->
+:::
 
-<!-- :::box -->
+:::box
 ## [Web Server Project]({base}/web-server)
 
 [TODO: description
@@ -50,23 +50,13 @@ Check out the resources below during and after the session. Reach out to us at [
 ::button[View Sample Lesson Plan]{href="{base}/web-server/lesson-plan"}
 ::button[Print Sample Lesson Plan]{href="{base}/web-server/lesson-plan"} -->
 
-<!-- ::: -->
+:::
 
-<!-- :::box -->
-## [Networking Lesson Sparks]({base}/lesson-sparks)
-
-[TODO: description]
-
-<!-- ::button[View Materials]{href="{base}/lesson-sparks/instructions"}
-::button[Lesson Spark Template] -->
-
-<!-- ::: -->
-
-<!-- :::box -->
+:::box
 ## [Appendix]({base}/lesson-sparks)
 
 [TODO: description]
 
 <!-- ::button[View the Appendix]{href="{base}/appendix"} -->
 
-<!-- ::: -->
+:::
