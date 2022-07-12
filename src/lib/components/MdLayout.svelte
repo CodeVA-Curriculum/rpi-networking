@@ -2,10 +2,14 @@
     import TextImage from '$lib/components/TextImage.svelte'
     import Anchor from './Anchor.svelte';
     import Box from './Box.svelte'
+    import Image from './Image.svelte'
+
     const textimage = TextImage
     const a = Anchor
     const box = Box
-    export {textimage, a, box}
+    const img = Image
+
+    export {textimage, a, box, img}
 </script>
 
 <script>
@@ -26,5 +30,8 @@
         .nav {
             display: none;
         }
+            div {
+        break-inside: avoid;
+    }
     }
 </style>

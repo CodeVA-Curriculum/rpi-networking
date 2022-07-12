@@ -3,7 +3,7 @@
     export let classList = ''
 </script>
 
-<div class='{classList}'>
+<div class='{classList} mb-4'>
     <div class='columns'>
         <div class='column'>
             <slot />

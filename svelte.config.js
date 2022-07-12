@@ -14,7 +14,7 @@ const config = {
       fallback: null
     }),
     paths: {
-      // base: 'rpi-networking'
+      base: '/rpi-networking' // uncomment this before deployment
     },
   },
 

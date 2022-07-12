@@ -3,6 +3,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from "remark-rehype";
 import remarkDirective from "remark-directive";
 import remarkDirectiveRehype from "remark-directive-rehype";
+import remarkGfm from "remark-gfm";
 
 
 const config = defineConfig({
@@ -17,7 +18,7 @@ const config = defineConfig({
     //trail: './src/lib/components/Trail.svelte'
   },
 
-  remarkPlugins: [remarkParse, remarkDirective, remarkDirectiveRehype],
+  remarkPlugins: [remarkParse, remarkGfm, remarkDirective, remarkDirectiveRehype],
   rehypePlugins: [],
 });
 

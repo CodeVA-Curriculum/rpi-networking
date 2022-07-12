@@ -32,11 +32,11 @@
             >
                 Home
             </a>
-            <a class="navbar-item"
+            <!-- <a class="navbar-item"
                 href='{base}/about'
             >
                 About
-            </a>
+            </a> -->
             <a class="navbar-item"
                 href='{base}/session'
             >

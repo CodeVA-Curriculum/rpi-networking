@@ -22,31 +22,29 @@ To start an SSH session, type the following command into your terminal:
 ssh pi@[hostname].local
 ```
 
-:::textimage{src="TODO:"}
-...where `[hostname]` is replaced with the hostname of your target machine. For example, if I wanted to shell into the machine labeled `apollo` in the lab network displayed here, I would enter the following command into my terminal:
+...where `[hostname]` is replaced with the hostname of your target machine. For example, if I wanted to shell into the machine labeled `apollo` in a lab network, I would enter the following command into my terminal:
 
 ```
 ssh pi@apollo.local
 ```
 :::
 
-Then, type in the password for the machine: **csta2022**. You won't see a cursor when you enter the password--that's totally normal. Just type in the password and hit `Enter`, even though you can't see little dots or a cursor. 
+The first time you connect, you'll see a scary message that looks like this:
+
+```
+ssh pi@starbuck.local
+The authenticity of host 'starbuck.local (10.0.0.120)' can't be established.
+ECDSA key fingerprint is SHA256:DAW68oen42TdWDyrOycDZ1+y5ZV5D81kaVoi5FnpvoM.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+This is a security notification--if the machine is suspicious, it won't let you log in. Type `yes` and hit `Enter`.
+
+Finally, type in the password for the machine: **csta2022**. You won't see a cursor when you enter the password--that's totally normal. Just type in the password and hit `Enter`, even though you can't see little dots or a cursor. 
 
 It's a security problem to publicize our SSH password like this--don't do it! It's just for ease-of-use today during the session; we promise to change them to a secret password afterward.
 
-When you connect to a machine for the first time over SSH, you'll see the following message:
-
-```
-TODO:
-```
-
-Type `y` and hit `Enter`. Once you've successfully "shelled" into your target machine, you'll see something like this:
-
-```
-TODO:
-```
-
-This means you're in control of the machine! To stop controlling the machine, type `exit` and hit `Enter`. Exit your session and try reconnecting to practice SSH!
+Once you successfully connect, you'll see `pi@[hostname]` in green in your terminal. This means you're in control of the machine! To stop controlling the machine, type `exit` and hit `Enter`. Exit your session and try reconnecting to practice SSH!
 
 ## Light Check
 
@@ -63,16 +61,27 @@ python3
 You'll see something like this:
 
 ```
-TODO:
+pi@starbuck:~$: python3
+Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)] on bullseye
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
 ```
 
-This is the Python REPL, which allows you to type commands written in the Python language to control your computer. It's a lot like the terminal! First, you need to load up the `led` object. Type in the following command:
+This is the Python REPL, which allows you to type commands written in the Python language to control your computer. It's a lot like the terminal!
+
+### 2. Import the LED
+
+Next, you need to load up the `led` object. Type in the following command:
 
 ```
 from pi import led
 ```
 
-...and hit `Enter`. Just like with the terminal, if no error appears you're good to go! Now that you've `import`ed the `led`, you can manipulate it! Try out the commands below by entering them into the terminal one at a time:
+...and hit `Enter`. Just like with the terminal, if no error appears you're good to go!
+
+### 3. Control the Light
+
+Now that you've `import`ed the `led`, you can manipulate it! Try out the commands below by entering them into the terminal one at a time:
 
 | Command | Description |
 | ------- | ----------- |
@@ -97,9 +106,26 @@ If you have not done so already, visit your Pi's website by opening your interne
 
 ### 2. Find the File
 
+The file that has the HTML code you're looking for is called `index.html`, and it's in a folder called `server`. Follow the steps below to find the file using the terminal:
+
+1. First, look at the available folders and files by entering the `ls` command
+2. Make sure you see the folder `server` in the list. If you do, type `cd server` to "enter" the folder with the terminal
+3. Once you've entered the folder, enter the `ls` command to list the files and folders available in the new location--you're looking for a file called `index.html`
+4. If you see the file, you're good to go!
+
 ### 3. Edit the File
 
+To edit the file, you'll use a terminal-based text editor called `nano`. Follow the steps below to edit the `index.html` file:
+
+1. From inside the server folder (that's where you went in step #2), type `nano index.html` to open the file in your editor
+2. Make some changes! Add your name and something about yourself.
+3. When you've finished making your changes, press `Ctrl+S` to save your work, and then `Ctrl+X` to exit the editor
+
+Check out the [HTML Tutorial](https://www.w3schools.com/html/html_elements.asp) on W3Schools, or just type words without HTML formatting if you don't want to write HTML code today (no worries!).
+
 ### 4. Reload the Site
+
+Go to your browser, make sure you're looking at the `[hostname]:3000` page, and then hit refresh to see your changes! Then, visit other folks' websites on your lab network.
 
 ---
 

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Twine Trail Guide</title>
+	<title>Teaching Networking with Raspberry Pi</title>
 </svelte:head>
 
 <section class='hero is-fullheight-with-navbar homepage'>
@@ -21,7 +21,6 @@
 			<h2 class='subtitle m-2'>CodeVA @CSTA 2022</h2>
 			<div class='buttons is-centered m-3'>
 				<a href="{base}/session" class='button is-primary'>View Materials</a>
-				<a href="{base}/about" class='button is-secondary'>About</a>
 			</div>
 			
 		</div>

@@ -1,6 +1,6 @@
 # Appendix
 
-TODO: description
+This page contains supplementary resources for the activities in this site. Let us know if we should add anything by sending us an email at <curriculum@codevirginia.org>.
 
 ## Glossary of Terms
 
@@ -13,12 +13,13 @@ TODO:
 
 ## Extra Tutorials & Resources
 
-[TODO: description]
+The list below is an index of external resources you might be interested in using to complete some of the activities:
 
-* HTML Cheat Sheet
+* [Terminal Basics](/appendix/terminal-basics)
+* [W3Schools HTML Tutorial](https://www.w3schools.com/html/html_elements.asp)
 
 <!-- :::box -->
-### How to Set up Raspberry Pi Networks
+<!-- ### How to Set up Raspberry Pi Networks -->
 <!-- 
 [TODO: description]
 

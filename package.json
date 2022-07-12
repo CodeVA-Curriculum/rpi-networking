@@ -3,16 +3,18 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "rm -rf build && svelte-kit build && touch build/.nojekyll",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
-    "prepare": "svelte-kit sync"
+    "prepare": "svelte-kit sync",
+    "deploy": "yarn build && npx gh-pages -d build -t true"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "mdsvex": "^0.10.6",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "svelte-image": "^0.2.9"
   },
   "type": "module",
   "dependencies": {
@@ -22,6 +24,7 @@
     "remark-directive": "^2.0.1",
     "remark-directive-rehype": "^0.4.0",
     "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
     "sass": "^1.53.0",

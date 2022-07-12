@@ -23,7 +23,7 @@ In this activity, you'll connect your computer to your lab network and test out 
 
 Opening your terminal is different depending on what operating system you're using:
 
-:::textimage{src='TODO:' classList='box'}
+:::textimage{src='/images/cmd-snip.png' classList='box'}
 ### Windows
 
 1. Click the `Start` menu 
@@ -31,7 +31,7 @@ Opening your terminal is different depending on what operating system you're usi
 3. Click "Command Line" to open the terminal application
 :::
 
-:::textimage{src='TODO:' classList='box'}
+:::textimage{src='/images/terminal-snip.jpg' classList='box'}
 ### Mac
 
 1. Open "Spotlight Search" by pressing `Cmd + Space`
@@ -41,11 +41,11 @@ Opening your terminal is different depending on what operating system you're usi
 
 ### 2. Connect Your Computer
 
+:::textimage{src="https://placekitten.com/400/300" alt="The USB-to-Ethernet adapter you'll use to connect your device to the network"}
 Next, you need to connect your computer to the network. Do this by plugging in the USB-to-Ethernet adapter. Plug the USB side into your computer, and then connect the Ethernet side to one of your switches.
 
-![The USB-to-Ethernet adapter you'll use to connect your device to the network](TODO:)
-
 The lab network doesn't have internet, so it might take a minute for your computer to connect and you might see some warnings that you don't have internet access--that's fine! We don't need it to use the network and learn the basics. You might want to turn off the Wi-Fi on your personal computer during this activity so it doesn't automatically change over the conference Wi-Fi to get internet signal back.
+:::
 
 ### 3. Find Your IP Address
 
@@ -54,11 +54,11 @@ Every time you connect to a network, your computer is assigned an IP address. Th
 * **Windows:** `ifconfig`
 * **Mac/Linux:** `ip a`
 
-:::textimage{src="TODO:"}
+:::textimage{src="/images/ifconfig-markup.png"}
 Type the appropriate command based on which operating system you are using, and hit `Enter`. When you run the command, you'll see a lot of information pop up in the terminal. You don't need very much of this info at all, really--you're looking for the `eth0` address buried in the wall of text that poppoed up. Check out the image for an example:
-:::
 
 When you've found your IP address, write it on the sticky note associated with your computer in the topology diagram you made during the *[Unplugged Topology](/unplugged-topology)* activity!
+:::
 
 ### 4. Ping the Devices on Your Network
 
@@ -73,13 +73,20 @@ ping [hostname]
 ...replacing `[hostname]` with one of the hostnames in your lab. You should see something like this:
 
 ```
-TODO:
+ping starbuck.local
+PING starbuck.local (10.0.0.120) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.107 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.076 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.077 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.046 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.077 ms
 ```
 
-If you see something like this:
+Press `Ctrl+C` to stop the `ping`. If you see something like this:
 
-````
-TODO:
+```
+C:\Users\stapl>ping starbuck.local
+Ping request could not find host starbuck.local. Please check the name and try again. 
 ```
 
 ...it means your network isn't set up correctly. Let us know and we will come over to help troubleshoot! Once you've successfully `ping`ed a device, try:
