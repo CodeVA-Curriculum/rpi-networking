@@ -7,11 +7,11 @@
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/rpi-networking/_app/immutable/assets/pages/__layout.svelte-ff4c9ca8.css">
 	<link rel="stylesheet" href="/rpi-networking/_app/immutable/assets/MdLayout-a57bc936.css">
-	<link rel="modulepreload" href="/rpi-networking/_app/immutable/start-748f2ebb.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/start-71d3aa0e.js">
 	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/index-96b0a37c.js">
 	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/paths-396f020f.js">
 	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/__layout.svelte-b85322d2.js">
-	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/appendix/terminal.md-27bfb3cf.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/appendix/terminal.md-774f0b38.js">
 	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/MdLayout-32f4d437.js">
 	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/Nav-da18ce70.js">
 	</head>
@@ -32,35 +32,74 @@
             <a class="navbar-item" href="/rpi-networking/session">Session Materials
             </a></div></div></nav></div>
 <div class="section content svelte-1o783jd"><div class="container svelte-1o783jd"><h1>Terminal Basics</h1>
-<p>TODO:</p>
-<h2>Using the Terminal (Optional)</h2>
-<p>You can use the terminal to do all sorts of things. Here are the basics skills this tutorial covers:</p>
+<p>You can use the terminal to do all sorts of things. Here are the basics skills this resource covers:</p>
 <ol><li>Make a folder</li>
 <li>Enter the folder</li>
 <li>Make a file in the folder</li>
 <li>Edit the file</li>
 <li>Delete the file</li>
 <li>Delete the folder</li></ol>
-<p>The commands for the terminal are slightly different depending on the operating system you use. Follow the appropriate tutorial below to learn some basic terminal commands!</p>
+<p>The commands for the terminal are slightly different depending on the operating system you use. Use the appropriate resource below to learn some basic terminal commands!</p>
 <h3>Windows Command Line Tutorial</h3>
-<p>TODO:</p>
 <table><thead><tr><th>Command</th>
 <th>Description</th>
 <th>Example</th></tr></thead>
-<tbody></tbody></table>
+<tbody><tr><td><code>pwd</code></td>
+<td>Print the name of the working directory, your “location” the terminal is currently focused on</td>
+<td><code>pwd</code></td></tr>
+<tr><td><code>dir</code></td>
+<td>Print out the contents of the current directory</td>
+<td><code>dir</code></td></tr>
+<tr><td><code>cd [folder name]</code></td>
+<td>Change directory; “move” the terminal to focus on a different location. Must be one of the options displayed by <code>dir</code> or an absolute path. To move “up” to the parent folder, type <code>cd ..</code></td>
+<td><code>cd images</code></td></tr>
+<tr><td><code>mkdir [name]</code></td>
+<td>Make a folder in the working directory</td>
+<td><code>mkdir images</code></td></tr>
+<tr><td><code>type nul &gt; [filename]</code></td>
+<td>Create a file in the working directory</td>
+<td><code>type nul &gt; README.md</code></td></tr>
+<tr><td><code>rm [filename]</code></td>
+<td>Delete a file</td>
+<td><code>rm README.md</code></td></tr>
+<tr><td><code>rmdir \S [folder name]</code></td>
+<td>Delete a folder and its contents</td>
+<td><code>rmdir \S images</code></td></tr></tbody></table>
 <h3>Mac/Linux Terminal Tutorial</h3>
-<p>TODO:</p>
 <table><thead><tr><th>Command</th>
 <th>Description</th>
 <th>Example</th></tr></thead>
-<tbody></tbody></table></div>
+<tbody><tr><td><code>pwd</code></td>
+<td>Print the name of the working directory, your “location” the terminal is currently focused on</td>
+<td><code>pwd</code></td></tr>
+<tr><td><code>ls</code></td>
+<td>Print out the contents of the current directory</td>
+<td><code>ls</code></td></tr>
+<tr><td><code>cd [folder name]</code></td>
+<td>Change directory; “move” the terminal to focus on a different location. Must be one of the options displayed by <code>ls</code> or an absolute path. To move “up” to the parent folder, type <code>cd ..</code></td>
+<td><code>cd images</code></td></tr>
+<tr><td><code>mkdir [name]</code></td>
+<td>Make a folder in the working directory</td>
+<td><code>mkdir images</code></td></tr>
+<tr><td><code>touch [filename]</code></td>
+<td>Create a file in the working directory</td>
+<td><code>touch README.md</code></td></tr>
+<tr><td><code>rm [filename]</code></td>
+<td>Delete a file</td>
+<td><code>rm README.md</code></td></tr>
+<tr><td><code>rm -rf [folder name]</code></td>
+<td>Delete a folder and its contents</td>
+<td><code>rm -rf images</code></td></tr>
+<tr><td><code>nano [file name]</code></td>
+<td>Edit a file in the terminal using the <code>nano</code> text editor. When using the editor, type <code>Ctrl+S</code> to save, and <code>Ctrl+X</code> to exit</td>
+<td><code>nano README.md</code></td></tr></tbody></table></div>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1w0x6h2">
-		import { start } from "/rpi-networking/_app/immutable/start-748f2ebb.js";
+		<script type="module" data-sveltekit-hydrate="18brkmc">
+		import { start } from "/rpi-networking/_app/immutable/start-71d3aa0e.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1w0x6h2"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="18brkmc"]').parentNode,
 			paths: {"base":"/rpi-networking","assets":"/rpi-networking"},
 			session: {},
 			route: true,
