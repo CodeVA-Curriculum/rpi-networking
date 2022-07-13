@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/rpi-networking/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/rpi-networking/_app/immutable/assets/pages/__layout.svelte-ff4c9ca8.css">
+	<link rel="stylesheet" href="/rpi-networking/_app/immutable/assets/MdLayout-a57bc936.css">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/start-748f2ebb.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/index-96b0a37c.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/__layout.svelte-b85322d2.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/ssh-practice/index.md-fce50a4c.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/MdLayout-32f4d437.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/Nav-da18ce70.js">
+	</head>
+	<body>
+		<div>
+
+
+<div class="nav svelte-1o783jd"><nav class="navbar"><div class="navbar-brand logo"><a class="navbar-item" href="/rpi-networking/"><img alt="The CodeVA Logo" src="/rpi-networking/_app/immutable/assets/CodeVALogo-cdf06ed4.png" height="28">
+            <p class="mx-3 heading is-size-5">+</p>
+            <img alt="The CSTA Logo" src="/rpi-networking/_app/immutable/assets/CSTALogo-8d939e1a.png" height="28">
+            <h1 class="heading is-size-5 ml-5 mt-1 is-hidden-mobile">Teaching Networking with Raspberry Pi</h1></a>
+        <button role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="nav-menu"><span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span></button></div>
+    <div id="nav-menu" class="navbar-menu "><div class="navbar-end"><a class="navbar-item" href="/rpi-networking/">Home
+            </a>
+            
+            <a class="navbar-item" href="/rpi-networking/session">Session Materials
+            </a></div></div></nav></div>
+<div class="section content svelte-1o783jd"><div class="container svelte-1o783jd"><h1>SSH Practice</h1>
+<p>In this activity, you’ll take control of one of the computers on your network using a technique called <strong>secure shell</strong>, or <strong>SSH</strong> for short. SSH is a very, very common system administration technique (one might even say essential!) and people who work in IT and computer science use it all the time for different tasks ranging from software development to cybersecurity.</p>
+<p>When you SSH to another computer, you use your terminal to “take over” the terminal on that machine. It’s a sort of remote control, where you get access to the target computer’s terminal through your personal computer’s terminal window. Once you have successfully “shelled” into the target computer, you can control it in the same way you can control your personal computer with the terminal. Our Pis don’t have screens, mice, or keyboards, so SSH is the only way we can control them (you <em>could</em> hook a monitor up to a Pi, but we didn’t have enough room in our luggage and SSH is an important concept to learn anyway).</p>
+<p>Follow the steps below to shell into a Pi and control it remotely from your computer!</p>
+<h2>Starting the Shell</h2>
+<p>The first thing to do is to make an SSH connection to one of the machines on your lab network. Once you successfully log in via SSH, you’ll be able to control the Pi in a couple of interesting ways.</p>
+<h3>1. Pick a Target</h3>
+<p>First, decide which Pi you want to take control of. Make sure each person in your group is shelling into a different Pi–you don’t want to accidentally end up controlling the same machine! Write your name on the sticky note associated with your Pi in the unplugged topology diagram you made earlier.</p>
+<h3>2. Run the SSH Command</h3>
+<p>To start an SSH session, type the following command into your terminal:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">ssh pi@[hostname].local</code><!-- HTML_TAG_END --></pre>
+<p>…where <code>[hostname]</code> is replaced with the hostname of your target machine. For example, if I wanted to shell into the machine labeled <code>apollo</code> in a lab network, I would enter the following command into my terminal:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">ssh pi@apollo.local</code><!-- HTML_TAG_END --></pre>
+<p>:::</p>
+<p>The first time you connect, you’ll see a scary message that looks like this:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">ssh pi@starbuck.local
+The authenticity of host &#39;starbuck.local (10.0.0.120)&#39; can&#39;t be established.
+ECDSA key fingerprint is SHA256:DAW68oen42TdWDyrOycDZ1+y5ZV5D81kaVoi5FnpvoM.
+Are you sure you want to continue connecting (yes/no)?</code><!-- HTML_TAG_END --></pre>
+<p>This is a security notification–if the machine is suspicious, it won’t let you log in. Type <code>yes</code> and hit <code>Enter</code>.</p>
+<p>Finally, type in the password for the machine: <strong>csta2022</strong>. You won’t see a cursor when you enter the password–that’s totally normal. Just type in the password and hit <code>Enter</code>, even though you can’t see little dots or a cursor.</p>
+<p>It’s a security problem to publicize our SSH password like this–don’t do it! It’s just for ease-of-use today during the session; we promise to change them to a secret password afterward.</p>
+<p>Once you successfully connect, you’ll see <code>pi@[hostname]</code> in green in your terminal. This means you’re in control of the machine! To stop controlling the machine, type <code>exit</code> and hit <code>Enter</code>. Exit your session and try reconnecting to practice SSH!</p>
+<h2>Light Check</h2>
+<p>Now that you’re controlling the Pi remotely, you can manipulate it in all sorts of interesting ways. We’ve hooked a light up to the Pi to help demonstrate the connection in a more “real” way. Follow the steps below to play with the light!</p>
+<h3>1. Start the Python REPL</h3>
+<p>We’ll control the light with Python, a popular programming language. Don’t worry if you don’t know how to code with Python–we aren’t going to do anything that requires prior knowledge. First, type the following command into your SSH terminal:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">python3</code><!-- HTML_TAG_END --></pre>
+<p>You’ll see something like this:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pi@starbuck:~$: python3
+Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)] on bullseye
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;</code><!-- HTML_TAG_END --></pre>
+<p>This is the Python REPL, which allows you to type commands written in the Python language to control your computer. It’s a lot like the terminal!</p>
+<h3>2. Import the LED</h3>
+<p>Next, you need to load up the <code>led</code> object. Type in the following command:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">from pi import led</code><!-- HTML_TAG_END --></pre>
+<p>…and hit <code>Enter</code>. Just like with the terminal, if no error appears you’re good to go!</p>
+<h3>3. Control the Light</h3>
+<p>Now that you’ve <code>import</code>ed the <code>led</code>, you can manipulate it! Try out the commands below by entering them into the terminal one at a time:</p>
+<table><thead><tr><th>Command</th>
+<th>Description</th></tr></thead>
+<tbody><tr><td><code>led.on()</code></td>
+<td>Turn the LED on</td></tr>
+<tr><td><code>led.off()</code></td>
+<td>Turn the LED off</td></tr>
+<tr><td><code>led.toggle()</code></td>
+<td>Toggle the LED on or off</td></tr>
+<tr><td><code>led.red()</code></td>
+<td>Set the LED color to red</td></tr>
+<tr><td><code>led.blue()</code></td>
+<td>Set the LED color to blue</td></tr>
+<tr><td><code>led.green()</code></td>
+<td>Set the LED color to green</td></tr>
+<tr><td><code>led.white()</code></td>
+<td>Set the LED color to white</td></tr>
+<tr><td>quit()</td>
+<td>Exit the REPL and return to the terminal</td></tr></tbody></table>
+<p>This works by using CircuitPython a set of Python libraries designed to control electronic components. You can do lots of cool things with it; check it out if you’re interested!</p>
+<h2>Finding Your Server</h2>
+<p>After playing with your computer’s light, it’s time to do some more advanced work. As you may already know, your Pi is currently serving a website that you can access via the network! If you can find the files the Pi is serving over the network, you can change what the website looks like.</p>
+<h3>1. Connect to Your Website</h3>
+<p>If you have not done so already, visit your Pi’s website by opening your internet browser and typing in <code>[hostname]:3000</code>, where <code>[hostname]</code> is replaced with the hostname for your Pi. This website is being stored on your Pi! If you change the HTML code in the files on your Pi, the website will change as well.</p>
+<h3>2. Find the File</h3>
+<p>The file that has the HTML code you’re looking for is called <code>index.html</code>, and it’s in a folder called <code>server</code>. Follow the steps below to find the file using the terminal:</p>
+<ol><li>First, look at the available folders and files by entering the <code>ls</code> command</li>
+<li>Make sure you see the folder <code>server</code> in the list. If you do, type <code>cd server</code> to “enter” the folder with the terminal</li>
+<li>Once you’ve entered the folder, enter the <code>ls</code> command to list the files and folders available in the new location–you’re looking for a file called <code>index.html</code></li>
+<li>If you see the file, you’re good to go!</li></ol>
+<h3>3. Edit the File</h3>
+<p>To edit the file, you’ll use a terminal-based text editor called <code>nano</code>. Follow the steps below to edit the <code>index.html</code> file:</p>
+<ol><li>From inside the server folder (that’s where you went in step #2), type <code>nano index.html</code> to open the file in your editor</li>
+<li>Make some changes! Add your name and something about yourself.</li>
+<li>When you’ve finished making your changes, press <code>Ctrl+S</code> to save your work, and then <code>Ctrl+X</code> to exit the editor</li></ol>
+<p>Check out the <a href="https://www.w3schools.com/html/html_elements.asp">HTML Tutorial</a> on W3Schools, or just type words without HTML formatting if you don’t want to write HTML code today (no worries!).</p>
+<h3>4. Reload the Site</h3>
+<p>Go to your browser, make sure you’re looking at the <code>[hostname]:3000</code> page, and then hit refresh to see your changes! Then, visit other folks’ websites on your lab network.</p>
+<hr>
+<p>Now that you’ve had some practice with SSH, it’s time to do a project with your group! Check out the <a href="/rpi-networking/web-server">next tutorial</a> to get started on the  <em><a href="/rpi-networking/web-server">Web Server Mini-Project</a></em>.</p></div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="1cdasux">
+		import { start } from "/rpi-networking/_app/immutable/start-748f2ebb.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1cdasux"]').parentNode,
+			paths: {"base":"/rpi-networking","assets":"/rpi-networking"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 6],
+				params: {},
+				routeId: "ssh-practice"
+			}
+		});
+	</script></div>
+	</body>
+</html>

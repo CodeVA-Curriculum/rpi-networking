@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/rpi-networking/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/rpi-networking/_app/immutable/assets/pages/__layout.svelte-ff4c9ca8.css">
+	<link rel="stylesheet" href="/rpi-networking/_app/immutable/assets/MdLayout-a57bc936.css">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/start-748f2ebb.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/index-96b0a37c.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/__layout.svelte-b85322d2.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/terminal-basics/index.md-243da535.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/MdLayout-32f4d437.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/Nav-da18ce70.js">
+	</head>
+	<body>
+		<div>
+
+
+<div class="nav svelte-1o783jd"><nav class="navbar"><div class="navbar-brand logo"><a class="navbar-item" href="/rpi-networking/"><img alt="The CodeVA Logo" src="/rpi-networking/_app/immutable/assets/CodeVALogo-cdf06ed4.png" height="28">
+            <p class="mx-3 heading is-size-5">+</p>
+            <img alt="The CSTA Logo" src="/rpi-networking/_app/immutable/assets/CSTALogo-8d939e1a.png" height="28">
+            <h1 class="heading is-size-5 ml-5 mt-1 is-hidden-mobile">Teaching Networking with Raspberry Pi</h1></a>
+        <button role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="nav-menu"><span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span></button></div>
+    <div id="nav-menu" class="navbar-menu "><div class="navbar-end"><a class="navbar-item" href="/rpi-networking/">Home
+            </a>
+            
+            <a class="navbar-item" href="/rpi-networking/session">Session Materials
+            </a></div></div></nav></div>
+<div class="section content svelte-1o783jd"><div class="container svelte-1o783jd"><h1>Terminal Basics Activity</h1>
+<p>In this activity, you’ll use a application called the <strong>terminal</strong> (or <strong>command line</strong> if you’re on Windows) to investigate the devices on your network! You might not be familiar with the terminal, but it’s a very common tool (pretty much every computer has one) and it’s particularly useful for completing some basic networking tasks.</p>
+<h2>What Is the Terminal?</h2>
+<p>The “terminal” is a software program on your computer. To use it, you’ll type in commands to make the computer do things. It’s sort of like coding, but instead of typing many commands and running them all at once, you type one command at a time. You can use your terminal for all sorts of things that you might normally do using a mouse and the normal graphical user interface of your operating system; for example:</p>
+<ul><li>Make a folder</li>
+<li>Make a file</li>
+<li>Edit a file</li>
+<li>Delete a folder</li>
+<li>Delete a file</li>
+<li>Navigate the directory structure of your computer</li></ul>
+<p>You can learn these basic skills by checking out the <em><a href="/rpi-networking/appendix/terminal">Terminal Basics</a></em> tutorial in the <a href="/rpi-networking/appendix">Appendix</a>, but you don’t have to–this tutorial walks you through each step one at a time and tells you what to type at each stage.</p>
+<h2>Testing Your Lab Network with the Terminal</h2>
+<p>In this activity, you’ll connect your computer to your lab network and test out the connections using some terminal commands! Follow the steps below to get connected and test things out.</p>
+<h3>1. Open Your Terminal</h3>
+<p>Opening your terminal is different depending on what operating system you’re using:</p>
+<div class="box mb-4"><div class="columns"><div class="column"><h3>Windows</h3><ol><li>Click the <code>Start</code> menu</li>
+<li>Type <code>cmd</code>; you’ll see an option pop up called “Command Line”</li>
+<li>Click “Command Line” to open the terminal application</li></ol></div>
+        <div class="column"><img class="image svelte-1fgsue" src="/rpi-networking/images/cmd-snip.png"></div></div>
+</div>
+<div class="box mb-4"><div class="columns"><div class="column"><h3>Mac</h3><ol><li>Open “Spotlight Search” by pressing <code>Cmd + Space</code></li>
+<li>Type <code>terminal</code>. You’ll see the “Terminal” option come up</li>
+<li>Click “Terminal” to open the Terminal application.</li></ol></div>
+        <div class="column"><img class="image svelte-1fgsue" src="/rpi-networking/images/terminal-snip.jpg"></div></div>
+</div>
+<h3>2. Connect Your Computer</h3>
+<div class=" mb-4"><div class="columns"><div class="column"><p>Next, you need to connect your computer to the network. Do this by plugging in the USB-to-Ethernet adapter. Plug the USB side into your computer, and then connect the Ethernet side to one of your switches.</p><p>The lab network doesn’t have internet, so it might take a minute for your computer to connect and you might see some warnings that you don’t have internet access–that’s fine! We don’t need it to use the network and learn the basics. You might want to turn off the Wi-Fi on your personal computer during this activity so it doesn’t automatically change over the conference Wi-Fi to get internet signal back.</p></div>
+        <div class="column"><img class="image svelte-1fgsue" src="https://placekitten.com/400/300"></div></div>
+</div>
+<h3>3. Find Your IP Address</h3>
+<p>Every time you connect to a network, your computer is assigned an IP address. This is the “location” of your computer on the network, and it’s what other computers would use to communicate with your computer. You can find your IP address by running the following command in your terminal:</p>
+<ul><li><strong>Windows:</strong> <code>ifconfig</code></li>
+<li><strong>Mac/Linux:</strong> <code>ip a</code></li></ul>
+<div class=" mb-4"><div class="columns"><div class="column"><p>Type the appropriate command based on which operating system you are using, and hit <code>Enter</code>. When you run the command, you’ll see a lot of information pop up in the terminal. You don’t need very much of this info at all, really–you’re looking for the <code>eth0</code> address buried in the wall of text that poppoed up. Check out the image for an example:</p><p>When you’ve found your IP address, write it on the sticky note associated with your computer in the topology diagram you made during the <em><a href="/rpi-networking/unplugged-topology">Unplugged Topology</a></em> activity!</p></div>
+        <div class="column"><img class="image svelte-1fgsue" src="/rpi-networking/images/ifconfig-markup.png"></div></div>
+</div>
+<h3>4. Ping the Devices on Your Network</h3>
+<p>To make sure the network is working properly, you can try to communicate with the other computers on your network. Each computer has a name–check out the labels on the lab network to see the names for the computers in your lab. This name is called a <strong>hostname</strong>, and it’s a special substitute for an IP address that we can use to communicate over the network.</p>
+<p>To test the network, you need to “ping” each of the computers connected to it. “Pinging” involves using a terminal command to send a very small amount of data to a specificed IP address or hostname on the network. If it succeeds, then te network is working correctly! If it fails, it means there’s something wrong. To “ping” an address, type the following command:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">ping [hostname]</code><!-- HTML_TAG_END --></pre>
+<p>…replacing <code>[hostname]</code> with one of the hostnames in your lab. You should see something like this:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">ping starbuck.local
+PING starbuck.local (10.0.0.120) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.107 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.076 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.077 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.046 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.077 ms</code><!-- HTML_TAG_END --></pre>
+<p>Press <code>Ctrl+C</code> to stop the <code>ping</code>. If you see something like this:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">C:Usersstapl&gt;ping starbuck.local
+Ping request could not find host starbuck.local. Please check the name and try again. </code><!-- HTML_TAG_END --></pre>
+<p>…it means your network isn’t set up correctly. Let us know and we will come over to help troubleshoot! Once you’ve successfully <code>ping</code>ed a device, try:</p>
+<ol><li>Pinging the other devices on the network</li>
+<li>Pinging another session attendee’s computer</li>
+<li>Pinging yourself!</li>
+<li>Try visiting the following website in your browser: <code>[hostname]:3000</code> (I know there’s no internet, but just trust me)</li></ol>
+<p>If you don’t know the hostname, you can use an IP address in its place.</p>
+<hr>
+<p>Once you’ve tested the network, you’re ready for the next step! Check out the <em><a href="/rpi-networking/ssh-practice">SSH Practice</a></em> tutorial next.</p></div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="1rz7wvw">
+		import { start } from "/rpi-networking/_app/immutable/start-748f2ebb.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1rz7wvw"]').parentNode,
+			paths: {"base":"/rpi-networking","assets":"/rpi-networking"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 7],
+				params: {},
+				routeId: "terminal-basics"
+			}
+		});
+	</script></div>
+	</body>
+</html>

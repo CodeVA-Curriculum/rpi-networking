@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-8427c4f7.js",
+    "file": "start-748f2ebb.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -11,7 +11,7 @@
       "src/routes/__layout.svelte",
       "src/routes/__error.svelte",
       "src/routes/appendix/index.md",
-      "src/routes/appendix/terminal-basics.md",
+      "src/routes/appendix/terminal.md",
       "src/routes/index.svelte",
       "src/routes/session.md",
       "src/routes/ssh-practice/index.md",
@@ -46,27 +46,27 @@
     ]
   },
   "src/routes/appendix/index.md": {
-    "file": "pages/appendix/index.md-ba707bfd.js",
+    "file": "pages/appendix/index.md-8f064590.js",
     "src": "src/routes/appendix/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-96b0a37c.js",
-      "_MdLayout-7cab2e82.js",
+      "_MdLayout-32f4d437.js",
       "_paths-396f020f.js",
       "_Nav-da18ce70.js"
     ]
   },
-  "src/routes/appendix/terminal-basics.md": {
-    "file": "pages/appendix/terminal-basics.md-638bdcd6.js",
-    "src": "src/routes/appendix/terminal-basics.md",
+  "src/routes/appendix/terminal.md": {
+    "file": "pages/appendix/terminal.md-27bfb3cf.js",
+    "src": "src/routes/appendix/terminal.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-96b0a37c.js",
-      "_MdLayout-7cab2e82.js",
-      "_paths-396f020f.js",
-      "_Nav-da18ce70.js"
+      "_MdLayout-32f4d437.js",
+      "_Nav-da18ce70.js",
+      "_paths-396f020f.js"
     ]
   },
   "src/routes/index.svelte": {
@@ -84,63 +84,63 @@
     ]
   },
   "src/routes/session.md": {
-    "file": "pages/session.md-514c8d36.js",
+    "file": "pages/session.md-f306ccc1.js",
     "src": "src/routes/session.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-96b0a37c.js",
-      "_MdLayout-7cab2e82.js",
+      "_MdLayout-32f4d437.js",
       "_paths-396f020f.js",
       "_Nav-da18ce70.js"
     ]
   },
   "src/routes/ssh-practice/index.md": {
-    "file": "pages/ssh-practice/index.md-abc6b0d3.js",
+    "file": "pages/ssh-practice/index.md-fce50a4c.js",
     "src": "src/routes/ssh-practice/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-96b0a37c.js",
-      "_MdLayout-7cab2e82.js",
+      "_MdLayout-32f4d437.js",
       "_paths-396f020f.js",
       "_Nav-da18ce70.js"
     ]
   },
   "src/routes/terminal-basics/index.md": {
-    "file": "pages/terminal-basics/index.md-bcbd4266.js",
+    "file": "pages/terminal-basics/index.md-243da535.js",
     "src": "src/routes/terminal-basics/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-96b0a37c.js",
-      "_MdLayout-7cab2e82.js",
+      "_MdLayout-32f4d437.js",
       "_paths-396f020f.js",
       "_Nav-da18ce70.js"
     ]
   },
   "src/routes/unplugged-topology/index.md": {
-    "file": "pages/unplugged-topology/index.md-9df3db55.js",
+    "file": "pages/unplugged-topology/index.md-721e97c0.js",
     "src": "src/routes/unplugged-topology/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-96b0a37c.js",
-      "_MdLayout-7cab2e82.js",
+      "_MdLayout-32f4d437.js",
       "_paths-396f020f.js",
       "_Nav-da18ce70.js"
     ]
   },
   "src/routes/web-server/index.md": {
-    "file": "pages/web-server/index.md-502c52f0.js",
+    "file": "pages/web-server/index.md-8dfdea98.js",
     "src": "src/routes/web-server/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-96b0a37c.js",
-      "_MdLayout-7cab2e82.js",
-      "_paths-396f020f.js",
-      "_Nav-da18ce70.js"
+      "_MdLayout-32f4d437.js",
+      "_Nav-da18ce70.js",
+      "_paths-396f020f.js"
     ]
   },
   "_index-96b0a37c.js": {
@@ -149,11 +149,10 @@
   "_paths-396f020f.js": {
     "file": "chunks/paths-396f020f.js"
   },
-  "_MdLayout-7cab2e82.js": {
-    "file": "chunks/MdLayout-7cab2e82.js",
+  "_MdLayout-32f4d437.js": {
+    "file": "chunks/MdLayout-32f4d437.js",
     "imports": [
       "_index-96b0a37c.js",
-      "_paths-396f020f.js",
       "_Nav-da18ce70.js"
     ],
     "css": [

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/rpi-networking/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/rpi-networking/_app/immutable/assets/pages/__layout.svelte-ff4c9ca8.css">
+	<link rel="stylesheet" href="/rpi-networking/_app/immutable/assets/MdLayout-a57bc936.css">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/start-748f2ebb.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/index-96b0a37c.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/__layout.svelte-b85322d2.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/pages/web-server/index.md-8dfdea98.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/MdLayout-32f4d437.js">
+	<link rel="modulepreload" href="/rpi-networking/_app/immutable/chunks/Nav-da18ce70.js">
+	</head>
+	<body>
+		<div>
+
+
+<div class="nav svelte-1o783jd"><nav class="navbar"><div class="navbar-brand logo"><a class="navbar-item" href="/rpi-networking/"><img alt="The CodeVA Logo" src="/rpi-networking/_app/immutable/assets/CodeVALogo-cdf06ed4.png" height="28">
+            <p class="mx-3 heading is-size-5">+</p>
+            <img alt="The CSTA Logo" src="/rpi-networking/_app/immutable/assets/CSTALogo-8d939e1a.png" height="28">
+            <h1 class="heading is-size-5 ml-5 mt-1 is-hidden-mobile">Teaching Networking with Raspberry Pi</h1></a>
+        <button role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="nav-menu"><span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span></button></div>
+    <div id="nav-menu" class="navbar-menu "><div class="navbar-end"><a class="navbar-item" href="/rpi-networking/">Home
+            </a>
+            
+            <a class="navbar-item" href="/rpi-networking/session">Session Materials
+            </a></div></div></nav></div>
+<div class="section content svelte-1o783jd"><div class="container svelte-1o783jd"><h1>Web Server Mini-Project</h1>
+<p>In this mini-project, you’ll work with your group to build a simple web server with some files. Then, you’ll work together to consider how your small-scale internet works, and what sorts of norms, guidelines, and rules you would put in place if you wanted other people to use it.</p>
+<h2>Step 1: Assign Roles</h2>
+<p>The “extra” computer (the fourth one that no one in your group has used yet) in your network will be your “homepage”, linking together the other websites housed on the other three Pis in your network. Use a sticky note or a piece of tape to indicate which computer is the server so you don’t forget!</p>
+<h2>Step 2: Create a Webpage on Your Machine</h2>
+<p>Continue editing your <code>index.html</code> file on the Pi. To edit the file, enter the following commands into your terminal (just like before):</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">cd server
+nano index.html</code><!-- HTML_TAG_END --></pre>
+<p>Be sure to save frequently by pressing <code>Ctrl+S</code>. Your webpage can contain whatever information you want, but we suggest that you create a short biography of yourself. Consider including:</p>
+<ul><li>Your name</li>
+<li>Your email address</li>
+<li>Where you teach</li>
+<li>What grade level(s) you teach</li>
+<li>Your favorite thing about teaching computer science</li></ul>
+<p>Use the HTML template or the <a href="https://www.w3schools.com/html/html_elements.asp">W3Schools examples</a>, or just write a normal text file if you aren’t comfortable writing HTML. Once you’ve finished, pressed <code>Ctrl+X</code> to exit the editor.</p>
+<h2>Step 3: Create the “Homepage”</h2>
+<p>Work collaboratively to create a “homepage” on the fourth Pi. One person should code (probaby someone who has a little HTML experience, if possible), and the others can “co-pilot”. Edit the <code>index.html</code> file on the “homepage” Pi, and create links to the other pages in your lab network. Your page might look something like this:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;The Fabulous Lab Network&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to the Fabulous Lab Network!&lt;/h1&gt;
+        &lt;p&gt;Here are the webpages you can visit:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;starbuck:3000&quot;&gt;Riley&#39;s Page&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;apollo:3000&quot;&gt;Jo&#39;s Page&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;boomer:3000&quot;&gt;Dakota&#39;s Page&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;helo:3000&quot;&gt;Elicia&#39;s Page&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code><!-- HTML_TAG_END --></pre>
+<p>…but you can make it however you like. Be sure to test out your links!</p>
+<h3>Step 4: Ponder</h3>
+<p>Now that you’ve completed the technical work for this project, discuss the following prompt with your group:</p>
+<blockquote><p>You’ve created your own private internet! If you were to create this for your family, friends, or community, you might want to invite other people to connect with their own computers and host their own websites. That’s how the <em>real</em> internet works, after all! What rules would you make for your network to make sure it stays useful and fun? Should you be in charge of setting the rules, or should someone else? Collaborate with your group to decide on some rules and guidelines, and then add them to your homepage.</p></blockquote></div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="14vx9py">
+		import { start } from "/rpi-networking/_app/immutable/start-748f2ebb.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="14vx9py"]').parentNode,
+			paths: {"base":"/rpi-networking","assets":"/rpi-networking"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 9],
+				params: {},
+				routeId: "web-server"
+			}
+		});
+	</script></div>
+	</body>
+</html>
